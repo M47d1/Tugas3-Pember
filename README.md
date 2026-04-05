@@ -1,5 +1,7 @@
 # Tugas 3: Aplikasi Profil Mahasiswa (Intent & Parcelable)
 
+##Link github : https://github.com/M47d1/Tugas3-Pember.git
+
 Aplikasi Android sederhana yang dibuat untuk memenuhi Tugas 3 mata kuliah Pemrograman Mobile. Aplikasi ini mendemonstrasikan perpindahan data antar-Activity menggunakan konsep **Explicit Intent** dan **Parcelable**.
 
 ## 📝 Penjelasan Umum
