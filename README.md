@@ -20,8 +20,6 @@ Berikut adalah tampilan aplikasi saat dijalankan:
 | :---: | :---: |
 | ![Main Activity](screenshots/main_activity.png) | ![Profile Activity](screenshots/profile_activity.png) |
 
-> **Catatan:** Ganti path gambar di atas dengan lokasi screenshot asli kamu di folder GitHub jika ingin gambar muncul.
-
 ## 🛠️ Teknologi yang Digunakan
 - **Bahasa:** Kotlin
 - **UI Layout:** ConstraintLayout, TableLayout, CardView
