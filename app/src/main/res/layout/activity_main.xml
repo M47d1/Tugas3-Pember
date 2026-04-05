@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Profil Baru"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_marginTop="24dp">
+            <EditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilNama"
+            android:layout_marginTop="16dp">
+            <EditText
+                android:id="@+id/etNim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIM"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvProdiLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Program Studi:"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilNim"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <Spinner
+            android:id="@+id/spinnerProdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:entries="@array/prodi_array"
+            app:layout_constraintTop_toBottomOf="@id/tvProdiLabel"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvJkLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin:"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerProdi"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <RadioGroup
+            android:id="@+id/rgJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvJkLabel"
+            android:layout_marginTop="8dp">
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvHobiLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobi (pilih minimal 1):"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/rgJenisKelamin"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <LinearLayout
+            android:id="@+id/llHobi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvHobiLabel"
+            android:layout_marginTop="8dp">
+            <CheckBox android:id="@+id/cbCoding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coding" />
+            <CheckBox android:id="@+id/cbGaming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gaming" />
+            <CheckBox android:id="@+id/cbMembaca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Membaca" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTampilkan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tampilkan Profil"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/llHobi"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

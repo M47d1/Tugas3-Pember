@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tugas 3 IF UNRAM</string>
+    <string-array name="prodi_array">
+        <item>Teknik Informatika</item>
+        <item>Sistem Informasi</item>
+        <item>Teknik Elektro</item>
+    </string-array>
+</resources>
